@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem 10rem;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-start: 4;
+    width: 100%;
+    background-color: brown;
+}
+
+.navigation {
+    width: 10rem;
+    background-color: aqua;
+}
+
+.main {
+    width: 30rem;
+    background-color: blanchedalmond;
+}
+
+.related_links {
+    width: 10rem;
+    background-color: chocolate;
+}
+
+.footer {
+    width: 100%;
+    background-color: blueviolet;
+}
