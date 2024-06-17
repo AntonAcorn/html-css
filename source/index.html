@@ -17,7 +17,7 @@
       <label for="email">Email*</label>
       <input type="email" id="email" name="email" required>
 
-     <label for="password">Password*</label>
+      <label for="password">Password*</label>
       <input type="password" id="password" name="password" required minlength="10">
 
       <label for="confirm_password">Confirm password*</label>
@@ -45,6 +45,15 @@
         <label for="movies">Movies</label>
         <input type="checkbox" id="movies" name="movies">
       </fieldset>
+
+      <label for="source_of_income">Source of Income</label>
+      <select id="source_of_income" name="source_of_income">
+        <option value="" disabled selected>Not selected</option>
+        <option value="employed">Employed</option>
+        <option value="dividens">Dividends</option>
+        <option value="interest">Interest</option>
+        <option value="rental_income">Rental Income</option>
+      </select>
     </form>
   </body>
 </html>
