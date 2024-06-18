@@ -22,3 +22,28 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
 }
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    padding-left: 1rem;
+}
+
+.form-group input {
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+input[type="email"] {
+    grid-column: span 2;
+  }
