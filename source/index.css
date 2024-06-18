@@ -1,0 +1,24 @@
+:root {
+    --color-header-back-ground: #db4d0f;
+    --color-header-small-font: #f5dfd5;
+    --color-header-main-font: #ffffff;
+    --color-article-background: #f8f8f8;
+    --color-article-frame: #d9d9d9;
+}
+
+body {
+    margin: 0;
+    font: 18px/1.7 'Open Sans', sans-serif;
+}
+
+.navigation {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13.4rem;
+    width: 100%;
+    background-color: var(  --color-header-back-ground);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
