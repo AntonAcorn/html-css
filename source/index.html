@@ -12,7 +12,13 @@
     <form method="post" class="form">
       <div class="form-group">
         <label for="first_name">First name*</label>
-        <input type="text" id="first_name" name="given-name" required />
+        <input
+          type="text"
+          id="first_name"
+          name="given-name"
+          required
+          placeholder="Enter your first name"
+        />
       </div>
 
       <div class="form-group">
@@ -22,12 +28,20 @@
           name="last_name"
           id="last_name"
           name="family-name"
-          required/>
+          required
+          placeholder="Enter your last name"
+        />
       </div>
 
-      <div class="form-group">
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" required />
+      <div class="form-group email">
+          <label for="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
       </div>
 
       <div class="form-group">
@@ -37,37 +51,41 @@
           id="password"
           name="password"
           required
-          minlength="10"/>
+          minlength="10"
+          placeholder="Enter your password"
+        />
       </div>
-      
+
       <div class="form-group">
         <label for="confirm_password">Confirm password*</label>
         <input
           type="password"
           id="confirm_password"
           name="confirm_password"
-          required />
+          required
+          placeholder="Enter correct your confirm password"
+        />
       </div>
-      
-        <fieldset class="form-group">
-          <legend>Gender:</legend>
-          <label for="male">Male</label>
-          <input type="radio" id="male" name="gender" />
-          <label for="female">Female</label>
-          <input type="radio" id="female" name="gender" />
-        </fieldset>
 
-        <fieldset class="form-group">
-          <legend>Hobbies:</legend>
-          <label for="music">Music</label>
-          <input type="checkbox" id="music" name="music" />
-          <label for="sports">Sports</label>
-          <input type="checkbox" id="sports" name="sports" />
-          <label for="travel">Travel</label>
-          <input type="checkbox" id="travel" name="travel" />
-          <label for="movies">Movies</label>
-          <input type="checkbox" id="movies" name="movies" />
-        </fieldset>
+      <fieldset class="form-group gender">
+        <legend>Gender:</legend>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" class="radio-button"/>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" class="radio-button"/>
+      </fieldset>
+
+      <fieldset class="form-group hobbies">
+        <legend>Hobbies:</legend>
+        <label for="music">Music</label>
+        <input type="checkbox" id="music" name="music" />
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="sports" name="sports" />
+        <label for="travel">Travel</label>
+        <input type="checkbox" id="travel" name="travel" />
+        <label for="movies">Movies</label>
+        <input type="checkbox" id="movies" name="movies" />
+      </fieldset>
 
       <div class="form-group">
         <label for="source_of_income">Source of Income</label>
@@ -79,7 +97,7 @@
           <option value="rental_income">Rental Income</option>
         </select>
       </div>
-      
+
       <div class="form-group">
         <label for="income">Income</label>
         <input
@@ -92,7 +110,7 @@
           step="100"
         />
       </div>
-      
+
       <div class="form-group">
         <label for="profile_picture">Upload profile picture</label>
         <input
@@ -105,14 +123,14 @@
 
       <div class="form-group">
         <label for="age">Age</label>
-        <input type="number" id="age" name="age" />
+        <input type="number" id="age" name="age" placeholder="18" />
       </div>
 
       <div class="form-group">
         <label for="bio">Bio</label>
-        <textarea id="bio" name="bio"></textarea>
+        <textarea id="bio" name="bio">Tell about yourself</textarea>
       </div>
-      
+
       <button type="submit">Create</button>
     </form>
   </body>

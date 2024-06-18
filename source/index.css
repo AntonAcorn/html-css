@@ -1,6 +1,6 @@
 :root {
-    --color-header-back-ground: #db4d0f;
-    --color-header-small-font: #f5dfd5;
+    --color-main-color: #db4d0f;
+    --color-placeholder-color: #d2d1d6;
     --color-header-main-font: #ffffff;
     --color-article-background: #f8f8f8;
     --color-article-frame: #d9d9d9;
@@ -17,7 +17,7 @@ body {
     align-items: center;
     height: 13.4rem;
     width: 100%;
-    background-color: var(  --color-header-back-ground);
+    background-color: var(--color-main-color);
     color: white;
     font-size: 2.5rem;
     font-weight: 600;
@@ -25,9 +25,10 @@ body {
 
 .form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, auto);
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 3rem 5rem;
+    max-width: 100%;
 }
 
 .form-group {
@@ -36,14 +37,41 @@ body {
 }
 
 .form-group label {
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: var(--color-main-color);
 }
 
 .form-group input {
-    border-radius: 5px;
+    height: 2.8rem;
+    border-radius: 10px;
     border-width: 1px;
 }
 
-input[type="email"] {
-    grid-column: span 2;
-  }
+.form-group input::placeholder {
+    padding-left: 0.9rem;
+    color: var(--color-placeholder-color);
+    font-size: 1rem;
+}
+
+.form-group.email {
+    grid-column: 1 / -1;
+}
+
+.form-group legend {
+    font-weight: 600;
+    color: var(--color-main-color);
+}
+
+.form-group.gender {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group.hobbies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
