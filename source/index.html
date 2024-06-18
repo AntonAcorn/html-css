@@ -3,57 +3,117 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/source/index.css" />
+    <link rel="stylesheet" href="/source/reset.css" />
     <title>task-1-3</title>
   </head>
   <body>
-    <nav>Create Account</nav>
-    <form method="post">
-      <label for="first_name">First name*</label>
-      <input type="text" id="first_name" name="given-name" required>
+    <nav class="navigation">Create Account</nav>
 
-      <label for="last_name">Last name*</label>
-      <input type="text" name="last_name" id="last_name" name="family-name" required>
+    <form method="post" class="form">
+      <div class="form-group">
+        <label for="first_name">First name*</label>
+        <input type="text" id="first_name" name="given-name" required />
+      </div>
 
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="email" required>
+      <div class="form-group">
+        <label for="last_name">Last name*</label>
+        <input
+          type="text"
+          name="last_name"
+          id="last_name"
+          name="family-name"
+          required/>
+      </div>
 
-      <label for="password">Password*</label>
-      <input type="password" id="password" name="password" required minlength="10">
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-      <label for="confirm_password">Confirm password*</label>
-      <input type="password" id="confirm_password" name="confirm_password" required>
+      <div class="form-group">
+        <label for="password">Password*</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="10"/>
+      </div>
+      
+      <div class="form-group">
+        <label for="confirm_password">Confirm password*</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          required />
+      </div>
+      
+        <fieldset class="form-group">
+          <legend>Gender:</legend>
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" />
+          <label for="female">Female</label>
+          <input type="radio" id="female" name="gender" />
+        </fieldset>
 
-      <fieldset>
-        <legend>Gender:</legend>
-        <label for="male">Male</label>
-        <input type="radio" id="male" name="gender">
-        <label for="female">Female</label>
-        <input type="radio" id="female" name="gender">
-      </fieldset>
+        <fieldset class="form-group">
+          <legend>Hobbies:</legend>
+          <label for="music">Music</label>
+          <input type="checkbox" id="music" name="music" />
+          <label for="sports">Sports</label>
+          <input type="checkbox" id="sports" name="sports" />
+          <label for="travel">Travel</label>
+          <input type="checkbox" id="travel" name="travel" />
+          <label for="movies">Movies</label>
+          <input type="checkbox" id="movies" name="movies" />
+        </fieldset>
 
-      <fieldset>
-        <legend>Hobbies:</legend>
-        <label for="music">Music</label>
-        <input type="checkbox" id="music" name="music">
-        
-        <label for="sports">Sports</label>
-        <input type="checkbox" id="sports" name="sports">
+      <div class="form-group">
+        <label for="source_of_income">Source of Income</label>
+        <select id="source_of_income" name="source_of_income">
+          <option value="" disabled selected>Not selected</option>
+          <option value="employed">Employed</option>
+          <option value="dividens">Dividends</option>
+          <option value="interest">Interest</option>
+          <option value="rental_income">Rental Income</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="income">Income</label>
+        <input
+          type="range"
+          id="income"
+          name="income"
+          min="0"
+          max="100000"
+          value="20000"
+          step="100"
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="profile_picture">Upload profile picture</label>
+        <input
+          type="file"
+          id="profile_picture"
+          name="profile_picture"
+          accept="image/png, image/jpeg"
+        />
+      </div>
 
-        <label for="travel">Travel</label>
-        <input type="checkbox" id="travel" name="travel">
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" />
+      </div>
 
-        <label for="movies">Movies</label>
-        <input type="checkbox" id="movies" name="movies">
-      </fieldset>
-
-      <label for="source_of_income">Source of Income</label>
-      <select id="source_of_income" name="source_of_income">
-        <option value="" disabled selected>Not selected</option>
-        <option value="employed">Employed</option>
-        <option value="dividens">Dividends</option>
-        <option value="interest">Interest</option>
-        <option value="rental_income">Rental Income</option>
-      </select>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio"></textarea>
+      </div>
+      
+      <button type="submit">Create</button>
     </form>
   </body>
 </html>
