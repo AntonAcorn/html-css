@@ -42,8 +42,11 @@ body {
     color: var(--color-main-color);
 }
 
-.form-group input {
-    height: 2.8rem;
+.form-group input, 
+.form-group textarea, 
+.form-group select, 
+.form-group input[type="file"] {
+    height: 2rem;
     border-radius: 10px;
     border-width: 1px;
 }
@@ -62,13 +65,14 @@ body {
     font-weight: 600;
     color: var(--color-main-color);
     margin-left: 3rem;
+    padding-left: 7px;
 }
 
 .form-group.gender {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
 }
 
 .form-group.gender legend {
@@ -128,7 +132,7 @@ body {
 }
 
 .form-group.hobbies legend {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .form-group.hobbies label {
