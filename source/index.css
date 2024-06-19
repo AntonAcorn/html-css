@@ -64,13 +64,6 @@ body {
     margin-left: 3rem;
 }
 
-.form-group label {
-    display: flex;
-    align-items: center;
-    color: var(--color-main-text);
-    font-weight: 100;
-}
-
 .form-group.gender {
     display: flex;
     flex-direction: row;
@@ -80,6 +73,13 @@ body {
 
 .form-group.gender legend {
     margin-left: -1.3rem;
+}
+
+.form-group.gender label {
+    display: flex;
+    align-items: center;
+    color: var(--color-main-text);
+    font-weight: 100;
 }
 
 .radio-button-form {
