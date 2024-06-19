@@ -1,9 +1,9 @@
 :root {
     --color-main-color: #db4d0f;
     --color-placeholder-color: #d2d1d6;
-    --color-header-main-font: #ffffff;
-    --color-article-background: #f8f8f8;
-    --color-article-frame: #d9d9d9;
+    --color-main-text: #313131;
+    
+    
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     font: 18px/1.7 'Open Sans', sans-serif;
 }
 
-.navigation {    
+.navigation {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,17 +61,68 @@ body {
 .form-group legend {
     font-weight: 600;
     color: var(--color-main-color);
+    margin-left: 3rem;
 }
 
 .form-group.gender {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 3rem;
+}
+
+.form-group.gender legend {
+    margin-left: -1.3rem;
+}
+
+.form-group.gender label {
+    display: flex;
+    align-items: center;
+    color: var(--color-main-text);
+    font-weight: 100;
+}
+
+.radio-button-form {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.radio-button {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.radio-button-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-placeholder-color);
+    border-radius: 50%;
+    margin-left: -30px;
+    margin-bottom: 3px;
+}
+
+.radio-button:checked + .radio-button-style::before {
+    content: "";
+    background-color: var(--color-main-color);
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #ffcbba;
 }
 
 .form-group.hobbies {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
 
+}
