@@ -50,10 +50,10 @@ body {
     height: 2rem;
     border-radius: 10px;
     border-width: 1px;
+    padding-left: 10px;
 }
 
 .form-group input::placeholder {
-    padding-left: 0.9rem;
     color: var(--color-placeholder-color);
     font-size: 1rem;
 }
@@ -182,10 +182,55 @@ body {
     border: 5px solid #ffcbba;
 }
 
+.source_of_income {
+    margin-left: -8px;
+}
 
+.slider {
+    width: 100%;
+    height: 10px;
+    line-height: 40px;
+    appearance: none;
+    background: #edf1f4;
+    outline: none;
+    border-radius: 25px;
+    overflow: hidden;
+}
 
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #022f52;
+    box-shadow: -407px 0 0 400px #022f52;
+    cursor: pointer;
+}
 
+.slider-value {
+    position: relative;
+    text-align: center;
+    width: 60px;
+    font-size: 1.25em;
+    color: #fff;
+    background: #022f52;
+    margin-left: 15px;
+    border-radius: 25px;
+    font-weight: 500;
+}
 
+input:focus, 
+textarea:focus, 
+select:focus, 
+input[type="radio"]:focus, 
+input[type="checkbox"]:focus {
+    outline: 0;
+    box-shadow: 0px 0px 5px 1px rgba(56, 87, 122, 0.3);
+}
 
-
-
+input[type="range"]:focus,
+input[type="file"]:focus {
+    outline: none;
+    box-shadow: none;
+}
