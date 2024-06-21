@@ -6,6 +6,7 @@
     --color-light-color: #ffffff;
     --color-dark-color: #77767e;
     --color-main-text: #313131;
+    --color-confirmation: #4CAF50;
 
     --border-radius: 10px;
 }
@@ -299,8 +300,8 @@ button[type="submit"]:hover {
 
 .form-group input[type="password"]:focus {
     outline: none;
-    border: 1px solid #4CAF50;
-    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.6);
+    border: 1px solid var(--color-confirmation);
+    box-shadow: 0px 0px 5px var(--color-confirmation);
 }
 
 input:focus, 
