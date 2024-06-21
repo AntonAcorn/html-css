@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,14 +42,14 @@
     <fieldset class="form-group gender">
       <legend>Gender:</legend>
       <label for="male" class="radio-button-form">
-        <input type="radio" id="male" name="gender" class="radio-button" />
-        <span class="radio-button-style"></span>
+        <input type="radio" id="male" name="gender" class="radio-check-button" />
+        <span class="custom-check-radio-button"></span>
         Male
       </label>
     
       <label for="female" class="radio-button-form">
-        <input type="radio" id="female" name="gender" class="radio-button" />
-        <span class="radio-button-style"></span>
+        <input type="radio" id="female" name="gender" class="radio-check-button" />
+        <span class="custom-check-radio-button"></span>
         Female
       </label>
     </fieldset>
@@ -57,32 +57,32 @@
     <fieldset class="form-group hobbies">
       <legend>Hobbies:</legend>
       <label for="music" class="check-box-form">
-        <input type="checkbox" id="music" name="music" class="check-box"/>
-        <span class="check-box-style"></span>
+        <input type="checkbox" id="music" name="music" class="radio-check-button"/>
+        <span class="custom-check-radio-button"></span>
         Music
       </label>
       
       <label for="sport" class="check-box-form">
-        <input type="checkbox" id="sport" name="sport" class="check-box"/>
-        <span class="check-box-style"></span>
+        <input type="checkbox" id="sport" name="sport" class="radio-check-button"/>
+        <span class="custom-check-radio-button"></span>
         Sports
       </label>
       
       <label for="travel" class="check-box-form">
-        <input type="checkbox" id="travel" name="travel" class="check-box"/>
-        <span class="check-box-style"></span>
+        <input type="checkbox" id="travel" name="travel" class="radio-check-button"/>
+        <span class="custom-check-radio-button"></span>
         Travel
       </label>
       
       <label for="movies" class="check-box-form">
-        <input type="checkbox" id="movies" name="movies" class="check-box"/>
-        <span class="check-box-style"></span>
+        <input type="checkbox" id="movies" name="movies" class="radio-check-button"/>
+        <span class="custom-check-radio-button"></span>
         Movies
       </label>
     </fieldset>
 
     <div class="form-group">
-      <label for="source_of_income">Source of Income</label>
+      <label for="source_of_income" class="source_of_income">Source of Income</label>
       <select id="source_of_income" name="source_of_income">
         <option value="" disabled selected>Not selected</option>
         <option value="employed">Employed</option>
@@ -92,14 +92,20 @@
       </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group range">
       <label for="income">Income</label>
-      <input type="range" id="income" name="income" min="0" max="100000" value="20000" step="100" />
+      <div class="slider-wrapper">
+        <input type="range" class="slider" id="slider" name="income" min="0" max="100000" value="0" step="100"/>
+        <span id="slider-value">0</span>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="profile_picture">Upload profile picture</label>
-      <input type="file" id="profile_picture" name="profile_picture" accept="image/png, image/jpeg" />
+    <div class="form-group file-input">
+      <label for="input-file" class="upload-label">Upload profile picture</label>
+      <input type="file" name="file" id="input-file" class="input input-file">
+      <label for="input-file" class="input-file-button">
+        <span class="input-file-button-text">Choose file</span>
+      </label>
     </div>
 
     <div class="form-group">
@@ -107,13 +113,15 @@
       <input type="number" id="age" name="age" placeholder="18" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group bio">
       <label for="bio">Bio</label>
-      <textarea id="bio" name="bio">Tell about yourself</textarea>
+      <textarea id="bio" name="bio" class="bio" placeholder="Tell about yourself" rows="5"></textarea>
     </div>
 
     <button type="submit">Create</button>
   </form>
+  <script src="./script.js">
+  </script>
 </body>
 
 </html>
