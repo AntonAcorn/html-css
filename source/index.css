@@ -3,6 +3,7 @@
     --color-border-color: #ffcbba;
     --color-placeholder-color: #d2d1d6;
     --color-light-color: #ffffff;
+    --color-dark-color: #77767e;
     --color-main-text: #313131;
 }
 
@@ -219,7 +220,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 #slider-value{
     width: 13%;
     position: relative;
-    background-color:  #db4d0f;
+    background-color:  var(--color-main-color);
     color: var(--color-light-color);
     text-align: center;
     font-family: "Roboto Mono",monospace;
@@ -229,10 +230,11 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 .form-group.file-input {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 }
    
-.input__file {
+.input-file {
     width: 0;
     height: 0;
     position: absolute;
@@ -240,19 +242,21 @@ input[type="range"]:active::-webkit-slider-thumb{
     z-index: -1;
 }
 
-.input__file-button {
+.input-file-button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 20%;
     height: 30px;
-    background: var(--color-placeholder-color) !important;
-    border-radius: 1rem;
+    background: var(--color-dark-color) !important;
+    border-radius: 10px;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 0;
     color: var(--color-light-color) !important;
     font-weight: 300 !important;
     font-size: 1rem;
+    padding: 0 10px;
+    box-shadow: 0px 0px 5px 1px rgba(56, 87, 122, 0.3);
 }
 
 input:focus, 
