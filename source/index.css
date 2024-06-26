@@ -13,20 +13,42 @@ body {
 .parallax-container {
 	display: flex;
 	min-height: 100vh;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background-attachment: fixed;
-	background-image: url(../img/Summer.jpg);
+	background-image: url(../img/Winter.jpg);
 	background-position: center;
 	background-size: cover;
 }
 
 .title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: var(--color-text-main);
 	font-size: 5rem;
 	background-color: var(--color-text-background);
 	outline: 3px solid var(--color-text-background);
-	outline-offset: 3px;
+	outline-offset: 5px;
 	padding: 10px 10px;
+	opacity: 1;
+	text-align: center;
+}
+
+.buffer {
+	width: 100wh;
+	min-height: 10vh;
+	background-color: var(--color-main);
+}
+
+.parallax-container2 {
+	background-image: url(../img/Spring.jpg);
+}
+
+.parallax-container3 {
+	background-image: url(../img/Summer.jpg);
+}
+
+.parallax-container4 {
+	background-image: url(../img/Fall.jpg);
 }
