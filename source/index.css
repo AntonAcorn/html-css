@@ -1,7 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
 
 :root {
-  --color-main: rgb(63 63 63);
+  --color-main: #A9A9A9;
+	--color-text-main: #FFDEAD;
+	--color-text-background: #000000;
 }
 
 body {
@@ -13,4 +15,18 @@ body {
 	min-height: 100vh;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	background-attachment: fixed;
+	background-image: url(../img/Summer.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.title {
+	color: var(--color-text-main);
+	font-size: 5rem;
+	background-color: var(--color-text-background);
+	outline: 3px solid var(--color-text-background);
+	outline-offset: 3px;
+	padding: 10px 10px;
 }
