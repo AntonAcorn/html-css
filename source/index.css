@@ -1,5 +1,45 @@
+.flex-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
 .slider {
 	width: 800px;
 	height: 500px;
+	overflow: hidden;
+}
+
+.slides-wrapper {
+	display: flex;
+	width: calc(800px * 5);
+	height: inherit;
+}
+
+.slide {
+	width: 20%;
+	height: 500px;
+	transition: 2s;
+}
+
+.slide-1 {
+	background-color: aqua;
+}
+
+.slide-2 {
 	background-color: antiquewhite;
 }
+
+.slide-3 {
+	background-color: blue;
+}
+
+.slide-4 {
+	background-color: blueviolet;
+}
+
+.slide-5 {
+	background-color: yellowgreen;
+}
+
