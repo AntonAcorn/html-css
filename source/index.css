@@ -1,14 +1,30 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
 :root {
 	--slider-width: 800px;
 	--slider-height: 500px;
 	--number-of-slides: 5;
+	--button-color: #ffffff;
+	--text-color: #ffffff;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+	line-height: 1.6rem;
+	height: 100%;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .slider {
 	width: var(--slider-width);
 	height: var(--slider-height);
-	border-radius: 30px;
-	/* overflow: hidden; */
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .slides-wrapper {
@@ -26,16 +42,37 @@
 }
 
 .slide {
-	width: 20%;
+	width: var(--slider-width);
 	transition: 2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide-content {
+	padding: 5rem;
+	text-align: center;
+	color: var(--text-color);
+}
+
+.slide-content h1 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.slide-content p {
+	font-size: 1rem;
+	font-weight: 100;
+	margin-bottom: 2rem;
 }
 
 .slide-1 {
-	background-color: aqua;
+	background-color: #fd9615;
 }
 
 .slide-2 {
-	background-color: beige;
+	background-color: coral;
 }
 
 .slide-3 {
@@ -51,27 +88,23 @@
 }
 
 .navigation {
-	position: absolute;
-	width: 800px;
 	margin-top: -40px;
 	display: flex;
 	justify-content: center;
 }
 
 .navigation-btn {
-	border: 2px solid #de6a23;
+	border: 2px solid var(--button-color);
+	background-color: var(--button-color);
 	padding: 5px;
-	border-radius: 10px;
+	margin-right: 15px;
+	border-radius: 50%;
 	cursor: pointer;
 	transition: 1s;
 }
 
-.navigation-btn {
-	margin-right: 40px;
-}
-
 .navigation-btn:hover {
-	background: #de6a23;
+	background: none;
 }
 
 .radio1:checked~.slide-1 {
