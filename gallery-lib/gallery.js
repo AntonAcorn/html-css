@@ -10,9 +10,12 @@ class Gallery {
 
 		this.manageHTML = this.manageHTML.bind(this);
 		this.setParameters = this.setParameters.bind(this);
+		this.setEvents = this.setEvents.bind(this);
+		this.resizeGallery = this.resizeGallery.bind(this);
 
 		this.manageHTML();
 		this.setParameters();
+		this.setEvents();
 	}
 
 	manageHTML() {
@@ -67,5 +70,13 @@ class Gallery {
 		Array.from(this.slideNodes).forEach((slideNode) => {
 			slideNode.style.width = `${this.width}px`
 		});
+	}
+
+	setEvents() {
+		window.addEventListener('resize', debounce(this.resizeGallery));
+	}
+
+	resizeGallery() {
+		this.setParameters();
 	}
 }
