@@ -9,7 +9,10 @@ class Gallery {
 		this.currentSlide = 0;
 
 		this.manageHTML = this.manageHTML.bind(this);
+		this.setParameters = this.setParameters.bind(this);
+
 		this.manageHTML();
+		this.setParameters();
 	}
 
 	manageHTML() {
@@ -54,5 +57,10 @@ class Gallery {
 				return wrapperNode;
 			}
 		);
+	}
+
+	setParameters() {
+		const coordsContainer = this.containerNode.getBoundingClientRect();
+		this.width = coordsContainer.width;
 	}
 }
