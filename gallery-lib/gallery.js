@@ -78,5 +78,16 @@ class Gallery {
 
 	resizeGallery() {
 		this.setParameters();
+		console.log(11);
+	}
+}
+
+//helpers
+function debounce(func, time = 100) {
+	let timer;
+	return function (event) {
+		clearTimeout(timer);
+		//setTimeout принимает функцию, время и аргумент для функции
+		timer = setTimeout(func, time, event);
 	}
 }
