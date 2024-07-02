@@ -62,5 +62,10 @@ class Gallery {
 	setParameters() {
 		const coordsContainer = this.containerNode.getBoundingClientRect();
 		this.width = coordsContainer.width;
+
+		this.lineNode.style.width = `${this.size * this.width}px`;
+		Array.from(this.slideNodes).forEach((slideNode) => {
+			slideNode.style.width = `${this.width}px`
+		});
 	}
 }
