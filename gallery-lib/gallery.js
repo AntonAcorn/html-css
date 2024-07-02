@@ -7,11 +7,16 @@ class Gallery {
 		this.containerNode = element;
 		this.size = element.childElementCount;
 		this.currentSlide = 0;
+		this.currentSlideWasChanged = false;
 
 		this.manageHTML = this.manageHTML.bind(this);
 		this.setParameters = this.setParameters.bind(this);
 		this.setEvents = this.setEvents.bind(this);
 		this.resizeGallery = this.resizeGallery.bind(this);
+		this.startDrag = this.startDrag.bind(this);
+		this.stopDrag = this.stopDrag.bind(this);
+		this.dragging = this.dragging.bind(this);
+		this.setStylePosition = this.setStylePosition.bind(this);
 
 		this.manageHTML();
 		this.setParameters();
@@ -65,6 +70,8 @@ class Gallery {
 	setParameters() {
 		const coordsContainer = this.containerNode.getBoundingClientRect();
 		this.width = coordsContainer.width;
+		this.x = -this.currentSlide * this.width;
+		console.log(`x: ${this.x}`);
 
 		this.lineNode.style.width = `${this.size * this.width}px`;
 		Array.from(this.slideNodes).forEach((slideNode) => {
@@ -73,13 +80,72 @@ class Gallery {
 	}
 
 	setEvents() {
-		window.addEventListener('resize', debounce(this.resizeGallery));
+		this.debouncedResizedGallery = debounce(this.resizeGallery);
+		window.addEventListener('resize', this.debouncedResizedGallery);
+		this.lineNode.addEventListener('pointerdown', this.startDrag);
+		window.addEventListener('pointerup', this.stopDrag);
+	}
+
+	destroyEvents() {
+		window.removeEventListener('resize', this.debouncedResizedGallery);
 	}
 
 	resizeGallery() {
 		this.setParameters();
-		console.log(11);
 	}
+
+	startDrag(evt) {
+		this.currentSlideWasChanged = false;
+		this.clickX = evt.pageX;
+		// console.log(`event pageX: ${evt.pageX}`);
+		//это нужно, чтобы перетягивание слайда было не с 0 позиции, а с прошлой
+		this.strartX = this.x;
+		window.addEventListener('pointermove', this.dragging);
+	}
+
+	stopDrag() {
+		window.removeEventListener('pointermove', this.dragging);
+		console.log(this.currentSlide);
+	}
+
+	//evt всегда автоматически присутствует в eventListener 
+	dragging(evt) {
+		this.dragX = evt.pageX;
+		//координаты клика и насколько сместили позицию курсора
+		const dragShift = this.dragX - this.clickX;
+		// console.log(`dragShift: ${dragShift}`);
+		this.x = dragShift + this.strartX;
+		//метод самого премещения через transform translate 
+		this.setStylePosition();
+
+		//change active slide
+		if (dragShift > 20 && 
+			  dragShift > 0 && 
+				//Проверка, что слайд не первый
+				this.currentSlide > 0 &&
+			  !this.currentSlideWasChanged
+			) {
+			this.currentSlideWasChanged = true;
+			this.currentSlide = this.currentSlide - 1;
+		}
+
+		if (dragShift < -20 && 
+			dragShift < 0 && 
+			!this.currentSlideWasChanged &&
+			//Проверка, что слайд не последний
+			this.currentSlide < this.size - 1
+		) {
+		this.currentSlideWasChanged = true;
+		this.currentSlide = this.currentSlide + 1;
+	}
+	}
+
+	setStylePosition() {
+		this.lineNode.style.transform = `translate3d(${this.x}px, 0, 0)`;
+	}
+
+	//change active slide
+
 }
 
 //helpers
