@@ -1,0 +1,167 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+:root {
+	--slider-width: 800px;
+	--slider-height: 500px;
+	--number-of-slides: 5;
+	--button-color: #ffffff;
+	--text-color: #ffffff;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+	line-height: 1.6rem;
+	height: 100%;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider {
+	width: var(--slider-width);
+	height: var(--slider-height);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.slides-wrapper {
+	width: calc(var(--slider-width) * var(--number-of-slides));
+	height: var(--slider-height);
+	display: flex;
+}
+
+.slides-wrapper input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	scale: 0;
+	z-index: -1;
+}
+
+.slide {
+	position: relative;
+	width: var(--slider-width);
+	transition: 2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide-content {
+	padding: 5rem;
+	text-align: center;
+	color: var(--text-color);
+}
+
+.slide-content h1 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.slide-content p {
+	font-size: 1rem;
+	font-weight: 100;
+	margin-bottom: 2rem;
+}
+
+.slide-1 {
+	background-color: #fd9615;
+}
+
+.slide-2 {
+	background-color: coral;
+}
+
+.slide-3 {
+	background-color: blue;
+}
+
+.slide-4 {
+	background-color: blueviolet;
+}
+
+.slide-5 {
+	background-color: brown;
+}
+
+.navigation {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+}
+
+.navigation-btn {
+	border: 2px solid var(--button-color);
+	background-color: var(--button-color);
+	padding: 5px;
+	margin-right: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.navigation-btn:hover {
+	background: none;
+}
+
+.radio1:checked~.slide-1 {
+	margin-left: 0;
+}
+
+.radio2:checked~.slide-1 {
+	margin-left: -20%;
+}
+
+.radio3:checked~.slide-1 {
+	margin-left: -40%;
+}
+
+.radio4:checked~.slide-1 {
+	margin-left: -60%;
+}
+
+.radio5:checked~.slide-1 {
+	margin-left: -80%;
+}
+
+.arrow-button {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem; 
+	background-color: rgb(255, 255, 255);
+	color: #fd9613;
+	width: 40px;
+	height: 40px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	transition: 0.2s;
+}
+
+.disabled {
+	background-color: #febd89;
+}
+
+.arrow-left {
+	left: 10px;
+}
+
+.arrow-right {
+	right: 10px;
+}
+
+.arrow-button:hover {
+	background-color: #8f8f8f;
+}
+
+label {
+	padding: 15px;
+}
