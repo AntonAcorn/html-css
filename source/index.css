@@ -57,3 +57,18 @@ body {
 	transform:translate(-50%, -50%);
 }
 
+.features-title h1 {
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 400;
+}
+
+.features__item {
+	padding-left: 25px;
+	padding-right: 25px;
+	height: 490px;
+	width: 355px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 25px 1px rgba(255, 79, 0, 0.4);
+	box-sizing: border-box;
+}
