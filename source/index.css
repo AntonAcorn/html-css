@@ -57,6 +57,12 @@ body {
 	transform:translate(-50%, -50%);
 }
 
+.features {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
 .features-title h1 {
 	font-size: 36px;
 	line-height: 48px;
@@ -69,6 +75,32 @@ body {
 	height: 490px;
 	width: 355px;
 	border-radius: 10px;
-	box-shadow: 5px 5px 25px 1px rgba(255, 79, 0, 0.4);
+	box-shadow: 0px 10px 25px 5px rgba(255, 128, 0, 0.3);
 	box-sizing: border-box;
 }
+
+.features__item h2 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.features__item a {
+	display: inline-block;
+	position: relative;
+	font-size: 14px;
+	font-weight: 500;
+	color: #CC5520;
+	text-decoration: none;
+}
+
+.features__item a::after {
+	content: '';
+	background-image: url(./images/arrow_forward.png);
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: 50%;
+	right: -30px;
+	transform: translateY(-55%);
+}
+
