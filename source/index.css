@@ -1,6 +1,8 @@
 body {
+	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	line-height: 26px;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .container {
@@ -8,5 +10,50 @@ body {
 	width: 375px;
 	background: linear-gradient(rgba(255, 79, 0, 0.2) 0%, rgba(255, 255, 255, 1) 20%);
 	padding: 10px;
+}
+
+.header__logo {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.description {
+	margin-top: 50px;
+}
+
+.description h1 {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 48px;
+}
+
+.description p {
+	margin-top: 15px;
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 26px;
+}
+
+.download-buttons {
+	display: flex;
+	width: 355px;
+	justify-content: space-between;
+}
+
+.download-button {
+	position: relative;
+	background-color: #FF3D00;
+	border: none;
+	border-radius: 5px;
+	height: 56px;
+	width: 168px;	
+}
+
+.download-button img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
 }
 
