@@ -5,54 +5,58 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Task-1-8</title>
-	<!-- <link rel="stylesheet" href="./reset.css" /> -->
-	<link rel="stylesheet" href="./index.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+	<link rel="stylesheet" href="./dist/index.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" />
 </head>
 
 <body>
-	<div class="container">
+	<div class="content__wrapper">
 		<header class="header">
 			<div class="header__logo">
-				<img src="./images/logo.png" alt="Logo">
+				<img src="./images/logo.svg" alt="Logo">
 			</div>
+			<nav class="header__menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</nav>
+			<input type="checkbox" id="menu-toggle" class="header__menu-toggle">
+			<label for="menu-toggle" class="header__menu-toggle-label">&#9776;</label>
+			<div class="header__menu_mobile-overlay"></div>
+			<nav class="header__menu_mobile">
+				<img src="./images/logo.svg" alt="Logo">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</nav>
 		</header>
 
-		<section class="description">
-			<h1>New E-commerce App best for You</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sed vulputate vitae
-				velit dictum cursus amet. Turpis
-				donec ut velit quis. Cursus commodo, eget urna, sapien amet.</p>
-		</section>
+		<div class="description">
+			<div class="description__wrapper">
+				<h1>New E-commerce App best for You</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sed vulputate vitae velit dictum cursus amet.
+					Turpis donec ut velit quis. Cursus commodo, eget urna, sapien amet.</p>
 
-		<section class="app-showcase">
-			<img src="./images/mobile-mockup.png" alt="mobiles">
-		</section>
-
-		<div class="download-buttons">
-			<button class="download-button download-button_google-play">
-				<img src="./images/get-it-on-google.png" alt="get-it-on-google">
-			</button>
-			<button class="download-button download-button_apple-store">
-				<img src="./images/get-it-on-app-store.png" alt="get-it-on-app-store">
-			</button>
+			</div>
+			<div class="description__download-buttons download-buttons">
+				<button class="download-button download-button_google-play"></button>
+				<button class="download-button download-button_apple-store"></button>
+			</div>
+			<div class="description__app-showcase">
+				<img src="./images/mobile-mockup.svg" alt="mobiles">
+			</div>
 		</div>
 
-
-		<section class="features-title">
-			<h1>What we do to help</br> our customers in digital era.</h1>
-		</section>
-
 		<div class="features">
-			<div class="features__item">
+			<h1 class="features__title">What we do to help our customers in digital era.</h1>
+			<div class="features__item features__item_send">
 				<img class="features__item-image" src="./images/feature-1.png" alt="send">
 				<h2>Send</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. </p>
 				<a href="#">Learn more</a>
 			</div>
-
-			<div class="features__item">
+			<div class="features__item features__item_receive">
 				<img class="features__item-image" src="./images/feature-2.png" alt="Receive">
 				<h2 class="features__item-title">Receive</h2>
 				<p class="features__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -60,7 +64,7 @@
 				<a href="#" class="features__item-link">Learn more</a>
 			</div>
 
-			<div class="features__item">
+			<div class="features__item features__item_buy">
 				<img class="features__item-image" src="./images/feature-3.png" alt="Buy">
 				<h2 class="features__item-title">Buy</h2>
 				<p class="features__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -70,99 +74,101 @@
 		</div>
 
 		<section class="how-it-works">
-			<h2 class="how-it-works__title">How it works</h2>
-			<div class="how-it-works__step">
-				<img class="how-it-works__step-image" src="./images/how-it-works-1.png" alt="Create an account">
-				<h3 class="how-it-works__step-title">Create an account</h3>
-				<p class="how-it-works__step-description">Lorem ipsum dolor sit amet, consecteteu.</p>
-			</div>
-			<div class="how-it-works__step">
-				<img class="how-it-works__step-image" src="./images/how-it-works-2.png" alt="Get authorization">
-				<h3 class="how-it-works__step-title">Get authorization</h3>
-				<p class="how-it-works__step-description">Lorem ipsum dolor sit amet, consecteteu.</p>
-			</div>
-			<div class="how-it-works__step">
-				<img class="how-it-works__step-image" src="./images/how-it-works-3.png" alt="Enjoy the app">
-				<h3 class="how-it-works__step-title">Enjoy the app</h3>
-				<p class="how-it-works__step-description">Lorem ipsum dolor sit amet, consecteteu.</p>
+			<h2>How it works</h2>
+			<div class="how-it-works__step-wrapper">
+				<div class="how-it-works__step">
+					<img src="./images/how-it-works-1.svg" alt="Create an account">
+					<h3>Create an account</h3>
+					<p>Lorem ipsum dolor sit amet,<br /> consecteteu.</p>
+				</div>
+				<div class="how-it-works__step">
+					<img src="./images/how-it-works-2.svg" alt="Get authorization">
+					<h3>Get authorization</h3>
+					<p>Lorem ipsum dolor sit amet,<br /> consecteteu.</p>
+				</div>
+				<div class="how-it-works__step">
+					<img src="./images/how-it-works-3.svg" alt="Enjoy the app">
+					<h3>Enjoy the app</h3>
+					<p>Lorem ipsum dolor sit amet,<br /> consecteteu.</p>
+				</div>
 			</div>
 		</section>
 
 		<section class="reviews">
-			<h2 class="reviews__title">What the fox say</h2>
-			<img class="reviews__logo" src="./images/review-logo.png" alt="review-logo">
-			<div class="review__item">
-				<img class="reviews__item-quote-icon" src="./images/quotes-symbol.png" alt="quotes-symbol">
-				<p class="reviews__item-text">Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis
-					elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.</p>
-				<h3 class="reviews__item-author">Foxy</h3>
+			<h2>What the fox say</h2>
+			<div class="reviews__logo_wrapper">
+				<img src="./images/review-logo.svg" alt="review-logo">
 			</div>
-
-			<nav class="review__navigation">
-				<button class="reviews__button reviews__button_previous">&lt;</button>
-				<button class="reviews__button reviews__button_next">&gt;</button>
-			</nav>
+			<img class="reviews__item-quote-icon" src="./images/quotes-symbol.svg" alt="quotes-symbol">
+			<div class="review__item">
+				<p>Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis
+					elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.</p>
+				<h3>Foxy</h3>
+			</div>
+			<div class="review__navigation">
+				<button class="reviews__button reviews__button_previous"></button>
+				<button class="reviews__button reviews__button_next"></button>
+			</div>
+			<div class="review__background"></div>
 		</section>
 
 		<section class="download">
-			<img class="download__image" src="./images/download-image.png" alt="download-image">
-			<h2 class="download__title">Download app to enjoy more!</h2>
-			<div class="download-buttons">
-				<button class="download-button download-button_google-play">Get it On google play</button>
-				<button class="download-button download-button_apple-store">Download on the App Store</button>
+			<img class="download__image" src="./images/download-image.svg" alt="download-image">
+			<div class="download__description">
+				<h2>Download app to enjoy more!</h2>
+				<p>Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis
+					elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.</p>
+				<div class="download-buttons">
+					<button class="download-button download-button_google-play"></button>
+					<button class="download-button download-button_apple-store"></button>
+				</div>
 			</div>
 		</section>
 
 		<footer class="footer">
-			<h3 class="footer__title">foxminded</h3>
+			<h3>foxminded</h3>
 			<div class="footer__section">
-				<h2 class="footer__heading">Quick Links</h2>
+				<h2>Quick Links</h2>
 				<ul class="footer__list">
 					<li class="footer__item"><a class="footer__link" href="#">Sign Up</a></li>
 					<li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
 				</ul>
 			</div>
 			<div class="footer__section">
-				<h2 class="footer__title">Others</h2>
-				<ul class="footer__list">
-					<li class="footer__item"><a class="footer__link" href="#">User FAQs</a></li>
-					<li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
-					<li class="footer__item"><a class="footer__link" href="#">Legal</a></li>
-					<li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
-					<li class="footer__item"><a class="footer__link" href="#">Terms and Conditions</a></li>
+				<h2>Others</h2>
+				<ul>
+					<li><a href="#">User FAQs</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Legal</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms and Conditions</a></li>
 				</ul>
 			</div>
 			<div class="footer__section">
-				<h2 class="footer__title">Products</h2>
+				<h2>Products</h2>
 				<ul class="footer__list">
 					<li class="footer__item"><a class="footer__link" href="#">Send</a></li>
 					<li class="footer__item"><a class="footer__link" href="#">Receive</a></li>
 					<li class="footer__item"><a class="footer__link" href="#">Buy</a></li>
 				</ul>
 			</div>
-
 			<div class="footer__subscribe">
-				<h3 class="footer__subscribe-heading">Subscribe to our newsletter and be the first to know about our updates
-				</h3>
+				<h3>Subscribe to our newsletter and be the first to know about our updates</h3>
 				<form class="footer__form">
-					<input class="footer__email" type="email" placeholder="Email Address">
-					<button class="footer__subscribe-button">Subscribe</button>
+					<input type="email" placeholder="Email Address">
+					<button>Subscribe</button>
 				</form>
 			</div>
 
 			<div class="footer__social-media">
-				<a href="#" class="footer__social-link"><img src="./images/youtube.png" class="footer__social-icon"
-						alt="youtube icon"></a>
-				<a href="#" class="footer__social-link"><img src="./images/instagram.png" class="footer__social-icon"
-						alt="instagram icon"></a>
-				<a href="#" class="footer__social-link"><img src="./images/facebook.png" class="footer__social-icon"
-						alt="facebook icon"></a>
-				<a href="#" class="footer__social-link"><img src="./images/twitter.png" class="footer__social-icon"
-						alt="twitter icon"></a>
-			</div>
-			<p class="footer__copyright">Foxminded © 2023. All rights reserved.</p>
+				<p class="footer__copyright">Foxminded © 2023. All rights reserved.</p>
+				<div class="footer__icons-wrapper">
+					<a><img src="./images/youtube.svg" class="footer__social-icon" alt="youtube icon"></a>
+					<a><img src="./images/instagram.svg" class="footer__social-icon" alt="instagram icon"></a>
+					<a><img src="./images/facebook.svg" class="footer__social-icon" alt="facebook icon"></a>
+					<a><img src="./images/twitter.svg" class="footer__social-icon" alt="twitter icon"></a>
+				</div>
 		</footer>
 	</div>
 </body>
-
 </html>
